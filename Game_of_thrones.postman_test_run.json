@@ -1,0 +1,152 @@
+{
+	"id": "9f2f5efc-6405-4c06-a172-462a6d783c60",
+	"name": "Game_of_thrones",
+	"timestamp": "2021-10-24T17:14:27.785Z",
+	"collection_id": "17689362-c55d8536-baba-44de-9952-2580abbb5042",
+	"folder_id": 0,
+	"environment_id": "17a849f9-24d3-4651-be51-7178d39647af",
+	"totalPass": 3,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "8a4418cb-b7ed-4711-bb0f-19d47148d61b",
+			"name": "Characters/Jon_Snow",
+			"url": "https://anapioficeandfire.com/api/characters/583",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5071dcf7-9cb3-49ac-aca9-c9cdfa3fba7b",
+			"name": "Book_1",
+			"url": "https://anapioficeandfire.com/api/books/1",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"authors": true
+			},
+			"testPassFailCounts": {
+				"authors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"authors": true
+				}
+			]
+		},
+		{
+			"id": "97c816e5-ef3b-4a39-b8a5-faedadbcc8a2",
+			"name": "Book_2",
+			"url": "https://anapioficeandfire.com/api/books/2",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6233291c-ae84-4692-829c-91ca403b004a",
+			"name": "House_Tagaryen",
+			"url": "https://anapioficeandfire.com/api/houses/378",
+			"time": 34,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				34
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cfa74fca-01e5-47f4-a0b2-d9fb00c04678",
+			"name": "Guide",
+			"url": "https://anapioficeandfire.com/api/",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"books": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"books": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"books": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 154,
+	"collection": {
+		"requests": [
+			{
+				"id": "8a4418cb-b7ed-4711-bb0f-19d47148d61b",
+				"method": "GET"
+			},
+			{
+				"id": "5071dcf7-9cb3-49ac-aca9-c9cdfa3fba7b",
+				"method": "GET"
+			},
+			{
+				"id": "97c816e5-ef3b-4a39-b8a5-faedadbcc8a2",
+				"method": "GET"
+			},
+			{
+				"id": "6233291c-ae84-4692-829c-91ca403b004a",
+				"method": "GET"
+			},
+			{
+				"id": "cfa74fca-01e5-47f4-a0b2-d9fb00c04678",
+				"method": "GET"
+			}
+		]
+	}
+}
