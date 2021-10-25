@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "c55d8536-baba-44de-9952-2580abbb5042",
+		"name": "Game_of_thrones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Characters/Jon_Snow",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}characters/583",
+					"host": [
+						"{{url}}characters"
+					],
+					"path": [
+						"583"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"authors\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.authors).to.eql([\"George R. R. Martin\"]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}books/1",
+					"host": [
+						"{{url}}books"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}books/2",
+					"host": [
+						"{{url}}books"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "House_Tagaryen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}houses/378",
+					"host": [
+						"{{url}}houses"
+					],
+					"path": [
+						"378"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guide",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"books\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.books).to.eql(\"https://anapioficeandfire.com/api/books\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " curl \"https://www.anapioficeandfire.com/api\""
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
